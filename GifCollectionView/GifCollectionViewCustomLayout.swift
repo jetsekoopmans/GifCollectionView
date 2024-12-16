@@ -13,7 +13,7 @@ class GifCollectionViewCustomLayout: UICollectionViewLayout {
     weak var delegate: GifCollectionViewCustomLayoutDelegate!
     
     //2. Configurable properties
-    fileprivate var numberOfColumns = 3
+    fileprivate var numberOfColumns = 2
     
     //3. Array to keep a cache of attributes.
     fileprivate var cache = [UICollectionViewLayoutAttributes]()
