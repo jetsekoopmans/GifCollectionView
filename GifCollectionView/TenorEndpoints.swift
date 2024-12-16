@@ -41,7 +41,7 @@ public struct TenorEndpointSearch: TenorEndpoint {
     var q: String
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Specify the content safety filter level
     var contentFilter: TenorContentFilter = .off
@@ -53,7 +53,7 @@ public struct TenorEndpointSearch: TenorEndpoint {
     var limit: Int = 20
     
     /// Reduce the Number of GIF formats returned in the GIF_OBJECT list.
-    var media_filter: String? = nil
+    var media_filter: String? = "gif,tinygif"
     
     /// Get results starting at position "value". Use a non-zero "next" value returned by API results to get the next set of results. pos is not an index and may be an integer, float, or string
     var pos: String? = nil
