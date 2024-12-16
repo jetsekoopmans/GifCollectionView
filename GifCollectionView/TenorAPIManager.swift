@@ -11,7 +11,7 @@ import SwiftyJSON
 public typealias loadGifsRequestCompletion = (_ success: Bool, _ gifs: [TenorGifItem]?, _ searchText: String?, _ position: String?) -> ()
 public typealias anonymousIdCompletionHanlder = (_ success: Bool, _ anonymousID: String?) -> ()
 
-let TenorBaseURL = "https://g.tenor.com/v1/"
+let TenorBaseURL = "https://tenor.googleapis.com/v2/"
 let TenorAnynymousIDUserDefaultKey = "TenorAnynymousIDUserDefaultKey"
 
 public final class TenorAPIManager {

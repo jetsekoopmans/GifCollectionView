@@ -34,10 +34,10 @@ public final class TenorGifItem: GifItem, Codable{
         simpleURL = URL(string: jsonObject["url"].stringValue)!
         gifID = jsonObject["id"].stringValue
         
-        let media = jsonObject["media"].arrayValue[0]
+        let media = jsonObject["media_formats"]
         
         let tinyGif = media["tinygif"]
-        tinyGifPreviewURL = URL(string: tinyGif["preview"].stringValue)!
+        tinyGifPreviewURL = URL(string: media["tinygifpreview"]["url"].stringValue)!
         tinyGifURL = URL(string: tinyGif["url"].stringValue)!
         tinyGifSize = tinyGif["size"].intValue
         
@@ -46,7 +46,7 @@ public final class TenorGifItem: GifItem, Codable{
         tinyGifHeight = tinyGifDimension[1]
         
         let regularGif = media["gif"]
-        regularGifPreviewURL = URL(string: regularGif["preview"].stringValue)!
+        regularGifPreviewURL = URL(string: media["gifpreview"]["url"].stringValue)!
         regularGifURL = URL(string: regularGif["url"].stringValue)!
         gifItemURL = URL(string: regularGif["url"].stringValue)!
         regularGifSize = regularGif["size"].intValue

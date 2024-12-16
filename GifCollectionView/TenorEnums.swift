@@ -13,7 +13,7 @@ public enum TenorEndpointType: String {
     case search = "search"
     
     /// Trending GIFs - Get a json object containing a list of the current global trending GIFs. The trending stream is updated regularly throughout the day.
-    case trending = "trending"
+    case trending = "featured"
     
     /// Categories - Get a json object containing a list of GIF categories associated with the provided type. Each category will include a corresponding search URL to be used if the user clicks on the category. The search URL will include the apikey, anonymous id, and locale that were used on the original call to the categories endpoint.
     case categories = "categories"
