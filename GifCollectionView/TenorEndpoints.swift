@@ -53,7 +53,7 @@ public struct TenorEndpointSearch: TenorEndpoint {
     var limit: Int = 20
     
     /// Reduce the Number of GIF formats returned in the GIF_OBJECT list.
-    var media_filter: String? = "gif,tinygif"
+    var media_filter: String? = "gif,gifpreview,tinygif,tinygifpreview"
     
     /// Get results starting at position "value". Use a non-zero "next" value returned by API results to get the next set of results. pos is not an index and may be an integer, float, or string
     var pos: String? = nil
@@ -104,13 +104,13 @@ public struct TenorEndpointTrending: TenorEndpoint {
     }
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Specify the content safety filter level
     var contentFilter: TenorContentFilter = .off
     
     /// Reduce the Number of GIF formats returned in the GIF_OBJECT list.
-    var media_filter: String? = nil
+    var media_filter: String? = "gif,gifpreview,tinygif,tinygifpreview"
     
     /// Filter the response GIF_OBJECT list to only include GIFs with aspect ratios that fit with in the selected range.
     var ar_range: TenorAspectRatio = .all
@@ -160,7 +160,7 @@ public struct TenorEndpointCategories: TenorEndpoint {
     }
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Specify the content safety filter level
     var contentFilter: TenorContentFilter = .off
@@ -206,7 +206,7 @@ public struct TenorEndpointSearchSuggestions: TenorEndpoint {
     var q: String
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Fetch up to a specified number of results (max: 50).
     var limit: Int = 20
@@ -249,7 +249,7 @@ public struct TenorEndpointAutocomplete: TenorEndpoint {
     var q: String
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Fetch up to a specified number of results (max: 50).
     var limit: Int = 20
@@ -289,7 +289,7 @@ public struct TenorEndpointTrendingSearchTerms: TenorEndpoint {
     }
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Fetch up to a specified number of results (max: 50).
     var limit: Int = 20
@@ -339,7 +339,7 @@ public struct TenorEndpointRegisterShare: TenorEndpoint {
     var q: String?
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Specify the anonymous_id tied to the given user
     var anon_id: String? = nil
@@ -384,7 +384,7 @@ public struct TenorEndpointGIFs: TenorEndpoint {
     var ids: String
     
     /// Reduce the Number of GIF formats returned in the GIF_OBJECT list.
-    var media_filter: String? = nil
+    var media_filter: String? = "gif,gifpreview,tinygif,tinygifpreview"
     
     /// Fetch up to a specified number of results (max: 50).
     var limit: Int = 20
@@ -441,13 +441,13 @@ public struct TenorEndpointRandomSearch: TenorEndpoint {
     var q: String
     
     /// Specify default language to interpret search string; xx is ISO 639-1 language code, _YY (optional) is 2-letter ISO 3166-1 country code
-    var locale: String = "en_US"
+    var locale: String = NSLocale.current.identifier // "en_US"
     
     /// Specify the content safety filter level
     var contentFilter: TenorContentFilter = .off
     
     /// Reduce the Number of GIF formats returned in the GIF_OBJECT list.
-    var media_filter: String? = nil
+    var media_filter: String? = "gif,gifpreview,tinygif,tinygifpreview"
     
     /// Filter the response GIF_OBJECT list to only include GIFs with aspect ratios that fit with in the selected range.
     var ar_range: TenorAspectRatio = .all
