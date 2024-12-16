@@ -17,6 +17,7 @@ let TenorAnynymousIDUserDefaultKey = "TenorAnynymousIDUserDefaultKey"
 public final class TenorAPIManager {
     func makeTenorWebRequest<T: TenorEndpoint>(endpoint: T, completionHandler: @escaping (_ success: Bool, _ response: T.response?) -> ()) {
         let loadGifsRequest = URLRequest.init(url: endpoint.url())
+        print(loadGifsRequest)
         self.makeWebRequest(urlRequest: loadGifsRequest) { success, jsonObject in
             if success, let json = jsonObject as? T.json{
                 let response = endpoint.responseExtractor(json)
