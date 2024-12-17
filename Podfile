@@ -7,7 +7,7 @@ target 'GifCollectionView' do
   use_frameworks!
 
   # Pods for GifCollectionView
-  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SwiftyJSON', '~> 5.0.2'
   pod 'SDWebImage'
 
   target 'GifCollectionViewTests' do
@@ -21,7 +21,7 @@ target 'GifCollectionViewExamples' do
   use_frameworks!
 
   # Pods for GifCollectionViewExamples
-  pod 'SwiftyJSON'
+  pod 'SwiftyJSON', '~> 5.0.2'
   pod 'SDWebImage'
 
 end
