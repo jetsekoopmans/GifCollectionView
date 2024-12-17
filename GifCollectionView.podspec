@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "GifCollectionView"
-  spec.version      = "0.0.8"
+  spec.version      = "0.0.9"
   spec.summary      = "Drop in Gif Collection View developed using UIKit"
 
   # This description is used to generate tags and improve search results.
@@ -135,7 +135,7 @@ Drop in Gif Collection View. Uses Tenor as GIFs provider.
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-  spec.dependency "SwiftyJSON", "~> 4.0"
+  spec.dependency "SwiftyJSON", "~> 5.0.2"
   spec.dependency "SDWebImage"
 
 end
