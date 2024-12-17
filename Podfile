@@ -21,7 +21,7 @@ target 'GifCollectionViewExamples' do
   use_frameworks!
 
   # Pods for GifCollectionViewExamples
-  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SwiftyJSON'
   pod 'SDWebImage'
 
 end
