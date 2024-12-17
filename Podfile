@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '12.0'
+ platform :ios, '12.1'
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://cdn.cocoapods.org/'
 target 'GifCollectionView' do
